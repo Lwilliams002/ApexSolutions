@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Payments</title>
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <!-- faremwork of css -->
+    <link rel="stylesheet" href="assets/css/bootstrap-lib/bootstrap.min.css">
+    <!-- style sheet of css        -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive sheet of css -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- fonts awsome icon link            -->
+    <link rel="stylesheet" href="assets/font-awesome-lib/icon/font-awesome.min.css">
+    <!-- slick-slider link css -->
+    <link rel="stylesheet" href="assets/css/slick.min.css">
+    <!-- animation of css -->
+    <link rel="stylesheet" href="assets/css/aos.css">
+</head>
+<body>
+    <div class="site-wrapper">
+        <div class="first_nav_hero_about">
+            <!-- ======== 1.1. header section ======== -->
+            <header>
+                <nav class="container navbar navbar-expand-lg ">
+                    <div class="container-fluid">
+                        <!-- site logo -->
+                        <a class="nav-logo p-0" href="index.html"><img src="assets/images/Logo.png" alt="Apex Payments logo"></a>
+                                <!-- navigation button  -->
+                        <button class="navbar-toggle" onclick="openNav()" type="button"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <!-- navigation bar manu  -->
+                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                            <ul
+                                class="navbar-nav d-flex justify-content-center align-items-center gap-lg-2 gap-md-2 gap-sm-2 gap-2 mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about.html">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="feature.html">Solutions</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a id="search-bar-bt" class="nav-link" href="#"><i
+                                            class="fa-solid fa-magnifying-glass"></i></a>
+                                </li>
+                                <li class="nav-item header_btn ">
+                                    <a class="nav-link nav-hrf btn-hover1" href="contact.html">Get a Quote</a>
+                                </li>
+                                <li class="nav-item" onclick="open_right_side()">
+                                    <a class="nav-link" href="#"><i class="fa-sharp fa-solid fa-bars"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!--============ navigation left slidebar================-->
+                <aside>
+                    <div id="mySidenav" class="sidenav">
+                        <div class="side-nav-logo d-flex justify-content-between align-items-center ps-4 pe-3">
+                            <figure class="navbar-brand"><a href="index.html"><img src="assets/images/Logo.png" alt="img"
+                                class="nav-logo"></a></figure>
+                            <div class="closebtn" onclick="closeNav()"><i
+                                    class="fa-solid fa-square-xmark side-bar-close-btn"></i></div>
+                        </div>
+                        <ul>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="feature.html">Solutions</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pricing.html">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="d-flex align-items-center justify-content-between pt-3" id="slid-btn">
+                                    <button class="a-slid">Pages</button>
+                                    <i class="fa-solid fa-caret-down pe-4"></i>
+                                </div>
+                                <ul id="slid-drop" class="myst">
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="team.html">Team</a></li>
+                                    <li><a href="testimonials.html">Testimonials</a></li>
+                                    <li><a href="blogs.html">Blogs</a></li>
+                                    <li><a href="faq.html">FAQ</a></li>
+                                    <li><a href="404.html">404</a></li>
+                                    <li><a href="coming.html">Coming Soon</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                <!--================== navigation drop search bar================-->
+                <div class="search" id="search-bar">
+                    <form class="d-flex nav-search">
+                        <input type="text" name="search" placeholder="Enter your text">
+                        <button class="btn-hover1" type="submit">Search</button>
+                    </form>
+                    <button id="remove-btn">
+                        <i class="fa-solid fa-square-xmark "></i>
+                    </button>
+                </div>
+                <!--=================navigation Right slidebar==================-->
+                <section class="right-sidbar" id="right_side">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <!-- site logo -->
+                        <a class="p-0 " href="index.html"><img src="assets/images/Logo.png" alt="logo"></a>
+                        <button class="close_right_sidebar fa-solid fa-xmark" onclick="close_right_sade()"> </button>
+                    </div>
+                    <p class="mt-4 pb-3">Apex Payments helps restaurants, retail, and service businesses accept cards fast—with transparent pricing, modern POS options, and hands-on support.</p>
+                    <a href="about.html" class="btn-hover1">Learn More</a>
+                    <hr>
+                    <h5 class="mt-4 mb-4">Connected details:</h5>
+                    <ul class="d-flex flex-column gap-3">
+                        <li>
+                            <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                            <a href="tel:+1-000-000-0000">+1 (000) 000-0000</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="mailto:support@titanpayments.com">support@titanpayments.com</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-clock"></i></a>
+                            <a href="#">Hours: Mon–Sat • 9AM–6PM</a>
+                        </li>
+                    </ul>
+                    <span class="d-flex gap-4 mt-4">
+                        <a href="#" class="p-0"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="p-0"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="p-0"><i class="fa-brands fa-twitter"></i></a>
+                    </span>
+                </section>
+            </header>
+            <!-- ======== End of 1.1. header section ========  -->
+            <!-- ======== 1.2. hero section ======== -->
+            <section class="hero">
+                <div class="container">
+                    <div class="row text-md-start text-sm-center text-center gap-md-0 gap-sm-4 gap-5" >
+                        <div  data-aos="fade-up" class="col-md-6 d-flex align-items-md-start align-items-ms-center align-items-center justify-content-center flex-column" >
+                            <h1>Payments That Power Your Business</h1>
+                            <p>Card processing, POS, and business tools built for restaurants, retail, and service companies. Fast setup, fair pricing, and real support.</p>
+                            <a class="btn-hover1" href="contact.html">Get a Free Quote</a>
+                        </div>
+                        <div data-aos="fade-down" class="col-md-6 position-relative d-flex flex-column justify-content-center align-items-center mt-md-0 mt-sm-5 mt-4">
+                            <img src="assets/images/index/hero.png" alt="hero_img1" class="moving">
+                            <img src="assets/images/index/hero_watch.png" alt="hero_img2">
+                            <img src="assets/images/icon/hero_star.png" alt="hero_icon">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ======== End of 1.2. hero section ========  -->
+            <!-- ======== 1.3. about section ========  -->
+            <section class="about">
+                <div class="container">
+                    <div class="row text-md-start text-sm-center text-center">
+                        <div class="col-md-6 d-flex justify-content-between">
+                            <div class="ab_card1"  data-aos="flip-left">
+                                <h3>About Apex Payments</h3>
+                                <p class="p-f-s">We help businesses accept payments in-store, online, and on the go. From countertop terminals to full POS, Apex Payments focuses on reliability, transparency, and support that actually answers.</p>
+                                <div class="d-flex align-items-center justify-content-lg-start justify-content-md-center justify-content-center">
+                                    <a class="btn-hover1" href="about.html">Our Story</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex justify-content-center mt-md-0 mt-sm-3 mt-3">
+                            <div class="ab_card2 d-flex flex-column justify-content-between" data-aos="flip-right">
+                                <div>
+                                    <div class="row gap-md-0 gap-sm-3 gap-3">
+                                        <div class="col-md-5 col-sm-12 col-12 ">
+                                            <div
+                                                class="d-flex justify-content-md-start justify-content-sm-center justify-content-center">
+                                                <h3 class="count">24</h3>
+                                                <h3>/7</h3>
+                                            </div>
+                                            <p class="p-f-s">Support that’s available when you need it—setup help, troubleshooting, and ongoing optimization.</p>
+                                        </div>
+                                        <div class="col-2 p-0 d-flex justify-content-center align-items-center">
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-5 col-sm-12 col-12 p-0">
+                                            <h3>Fast</h3>
+                                            <p class="p-f-s">Next-day funding options and quick onboarding for most businesses.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="d-flex mb-3 mt-4 gap-4 justify-content-md-start justify-content-ms-center justify-content-center">
+                                    <div class="ps-2">
+                                        <span>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </span>
+                                        <p>Trusted by local businesses</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- ======== End of 1.3. about section ========  -->
+        <!-- ======== 1.4. finance section ========  -->
+        <section class="finance">
+            <div class="container text-center">
+                <h2>Everything You Need to Take Payments</h2>
+                <P class="mt-0">Simple card processing with the tools to grow—transparent pricing, modern hardware, and reporting that helps you understand every sale.</P>
+                <div class="finanes-card row gap-md-0 gap-sm-4 gap-4">
+                    <div class="col-lg-4 col-md-4 d-flex justify-content-center pe-lg-3 pe-md-0 pe-sm-3 pe-3">
+                        <div class="fin-card" data-aos="flip-up">
+                            <figure><img src="assets/images/icon/graphe.png" alt="praph"></figure>
+                            <h4>Transparent Pricing</h4>
+                            <p class="p-f-s">Clear rates, no surprises. We’ll review your current statement and show your true effective rate.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex justify-content-center pe-lg-3 pe-md-0 pe-sm-3 pe-3">
+                        <div class="fin-card" data-aos="flip-up">
+                            <figure> <img src="assets/images/icon/doller.png" alt="doller"></figure>
+                            <h4>Fast Funding</h4>
+                            <p class="p-f-s">Get paid faster with dependable deposits and options that fit your cash flow.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+                        <div class="fin-card" data-aos="flip-up">
+                            <figure><img src="assets/images/icon/arow.png" alt="arow"></figure>
+                            <h4>POS & Terminals</h4>
+                            <p class="p-f-s">From simple terminals to full POS—built for restaurants, retail, and service businesses.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.4. finance section ========  -->
+        <!-- ======== 1.5. ispsum section ========  -->
+        <div class="ispsum-logo">
+            <div class="container">
+                <hr>
+                <div class="logo_ispsum_slider">
+                    <!--
+                    <a href="#">
+                        <figure><img src="assets/images/icon/clover.png" alt="img"></figure>
+                    </a>
+                    -->
+                    <a href="#">
+                        <figure>
+                            <svg data-name="brand/logo vertical" xmlns="http://www.w3.org/2000/svg" width="160" height="105.107" class="sc-64df00ad-4 hGBTLB"><defs><clipPath id="brand-logo-ver-white_svg__a"><path data-name="Ret\xE2ngulo 145" d="M0 0h160v105.107H0z" style="fill: rgb(255, 255, 255);"></path></clipPath></defs><g data-name="Grupo 181"><g data-name="Grupo 180" style="clip-path: url(&quot;#brand-logo-ver-white_svg__a&quot;);"><path data-name="Caminho 259" d="M201.03 0a24 24 0 1 0 24.076 24A24.029 24.029 0 0 0 201.03 0m9.92 21.748c-5.15 1.208-9.25 9.652-9.825 15.432a12.321 12.321 0 0 0-.075 1.338 13.192 13.192 0 0 0-.072-1.338c-.579-5.747-4.628-14.128-9.743-15.409a5.343 5.343 0 0 0-1.333-.17 11.532 11.532 0 0 0 1.333-.078 11.133 11.133 0 0 0 9.719-9.571 11.479 11.479 0 0 0 .1-1.46 10.89 10.89 0 0 0 .1 1.46 11.127 11.127 0 0 0 9.8 9.581 11.632 11.632 0 0 0 1.244.068 5.482 5.482 0 0 0-1.244.146" transform="translate(-121.924 .001)" style="fill: rgb(42, 112, 224);"></path><path data-name="Caminho 260" d="M308.48 312h-4.66a.209.209 0 0 0-.225.225v.363a.209.209 0 0 0 .225.225h1.9v6.274a.2.2 0 0 0 .225.214h.416a.2.2 0 0 0 .215-.214v-6.274h1.906a.2.2 0 0 0 .215-.225v-.363a.2.2 0 0 0-.215-.225" transform="translate(-209.181 -215.299)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 261" d="M216.136 316.007a2.359 2.359 0 0 0-1.123-.636l-1.445-.414a4.094 4.094 0 0 1-.446-.156 1.17 1.17 0 0 1-.326-.2.77.77 0 0 1-.2-.28 1.093 1.093 0 0 1-.07-.418v-.1a.953.953 0 0 1 .3-.745 1.22 1.22 0 0 1 .852-.274h2.2a.2.2 0 0 0 .225-.214v-.352a.2.2 0 0 0-.225-.214h-2.34a2.173 2.173 0 0 0-.753.125 1.81 1.81 0 0 0-.594.357 1.6 1.6 0 0 0-.394.553 1.786 1.786 0 0 0-.138.714V314a1.639 1.639 0 0 0 .372 1.1 2.027 2.027 0 0 0 1.032.617l1.414.4a4.539 4.539 0 0 1 .514.178 1.287 1.287 0 0 1 .367.225.894.894 0 0 1 .225.317 1.2 1.2 0 0 1 .081.469v.218a.941.941 0 0 1-.285.73 1.2 1.2 0 0 1-.841.268H212.2a.2.2 0 0 0-.225.214v.352a.2.2 0 0 0 .225.214h2.475a1.863 1.863 0 0 0 1.344-.484 1.684 1.684 0 0 0 .5-1.264v-.342a1.744 1.744 0 0 0-.384-1.2" transform="translate(-145.837 -215.299)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 262" d="M267.115 312h-.415a.209.209 0 0 0-.225.224v6.861a.2.2 0 0 0 .225.214h.416a.2.2 0 0 0 .215-.214v-6.861a.2.2 0 0 0-.215-.224" transform="translate(-183.604 -215.299)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 263" d="M243.075 312h-.416a.209.209 0 0 0-.225.224v3.113a.2.2 0 0 0-.04-.007h-2.629a.162.162 0 0 0-.025 0v-3.108a.2.2 0 0 0-.215-.224h-.416a.209.209 0 0 0-.225.224v6.861a.2.2 0 0 0 .225.214h.416a.2.2 0 0 0 .215-.214V316.1h2.654a.2.2 0 0 0 .04-.008v2.993a.2.2 0 0 0 .225.214h.416a.2.2 0 0 0 .215-.214v-6.861a.2.2 0 0 0-.215-.224" transform="translate(-164.594 -215.299)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 264" d="M285.812 312h-2.966c-.139 0-.191.121-.191.259l-.008 6.827a.2.2 0 0 0 .225.214h.416a.2.2 0 0 0 .215-.214V316.1h2.038a.188.188 0 0 0 .189-.214v-.344a.188.188 0 0 0-.189-.213H283.5v-2.518h2.309a.2.2 0 0 0 .215-.225v-.363a.2.2 0 0 0-.215-.224" transform="translate(-194.748 -215.299)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 265" d="m339.543 314.937-2.641 3.376a.08.08 0 0 0-.017.05v.387a.081.081 0 0 0 .081.081h2.359a.081.081 0 0 1 .081.081v1.363a.081.081 0 0 0 .081.081h.5a.081.081 0 0 0 .081-.081v-5.288a.081.081 0 0 0-.081-.081h-.384a.082.082 0 0 0-.064.031m-1.767 3.161 1.486-1.89a.081.081 0 0 1 .145.05v1.89a.081.081 0 0 1-.081.081h-1.486a.081.081 0 0 1-.064-.13" transform="translate(-232.118 -217.305)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 266" d="M333.04 308.428a4.757 4.757 0 1 0 4.773 4.757 4.77 4.77 0 0 0-4.773-4.757m4.095 4.757a4.095 4.095 0 1 1-4.095-4.081 4.093 4.093 0 0 1 4.095 4.081" transform="translate(-226.18 -212.835)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 267" d="M157.679 315.9a1.681 1.681 0 0 0-.563-.464 1.614 1.614 0 0 0 .471-.484 1.663 1.663 0 0 0 .228-.892v-.36a1.6 1.6 0 0 0-.5-1.245 1.919 1.919 0 0 0-1.336-.451h-2.214a.208.208 0 0 0-.225.224v6.86a.2.2 0 0 0 .225.214h2.245a2.355 2.355 0 0 0 .891-.153 1.614 1.614 0 0 0 .609-.421 1.694 1.694 0 0 0 .342-.616 2.453 2.453 0 0 0 .109-.735v-.549a1.479 1.479 0 0 0-.281-.926m-.574.937v.622a1.074 1.074 0 0 1-.287.8 1.253 1.253 0 0 1-.9.282h-1.521v-2.693h1.469a1.483 1.483 0 0 1 .907.26.846.846 0 0 1 .335.729m-2.711-1.747v-2.329h1.469a1.275 1.275 0 0 1 .825.231.844.844 0 0 1 .271.7v.394a.984.984 0 0 1-.278.728 1.12 1.12 0 0 1-.828.281z" transform="translate(-105.79 -215.302)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 268" d="M178.821 312h-.509a.235.235 0 0 0-.151.043.376.376 0 0 0-.082.1l-1.745 3.416-1.747-3.419a.375.375 0 0 0-.081-.1.237.237 0 0 0-.151-.042h-.509a.172.172 0 0 0-.194.172.188.188 0 0 0 .021.086l2.227 4.244v2.585a.2.2 0 0 0 .225.214h.416a.2.2 0 0 0 .214-.214v-2.575l2.217-4.209a.3.3 0 0 0 .042-.128.172.172 0 0 0-.194-.172" transform="translate(-119.649 -215.302)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 269" d="M95.37 193.7h3.415v12.239l4.759-12.239h3.449L102 205.938l5.385 13.024h-3.843l-4.759-13.024v13.024H95.37z" transform="translate(-65.711 -133.665)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 270" d="M186.261 193.7h3.612l1.675 5.5c.054.164.11.343.164.539s.12.41.2.639a39.136 39.136 0 0 1 1.281 5.007q.3-2.03.493-2.832l.525-2.256.2-.885 1.412-5.709h3.564l-4.417 14.4v10.864h-3.415V208.1z" transform="translate(-128.336 -133.665)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 271" d="M396.188 216.657h-3.249s-2.448-13.3-2.765-16.407c-.154 1.518-2.7 16.407-2.7 16.407h-3.189l5.85-26.3" transform="translate(-264.78 -131.361)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 272" d="M480.016 193.7h4.768q5.435 0 5.435 6.726a7.964 7.964 0 0 1-.707 3.811 4.417 4.417 0 0 1-2.5 1.883 5.445 5.445 0 0 1 2.808 2.094 7.271 7.271 0 0 1 .913 3.8c0 4.635-2.133 6.953-6.116 6.953h-4.465zm3.358 11.126a3.467 3.467 0 0 0 2.758-.916 5.577 5.577 0 0 0 .771-3.388q0-4.089-2.955-4.089h-.411a.454.454 0 0 0-.162.016zm0 11.224a3.8 3.8 0 0 0 2.9-.9 4.963 4.963 0 0 0 .8-3.257 5.237 5.237 0 0 0-.837-3.388 3.575 3.575 0 0 0-2.872-.982z" transform="translate(-330.738 -133.665)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 273" d="M285.836 193.7h12.294v2.978h-4.46v22.285h-3.349v-22.286h-4.485z" transform="translate(-196.945 -133.665)" style="fill: rgb(255, 255, 255);"></path><path data-name="Caminho 274" d="M10.222 194.807v3.24a8.529 8.529 0 0 0-3.671-1.374 2.963 2.963 0 0 0-2.251.927 3.189 3.189 0 0 0-.873 2.347 3.887 3.887 0 0 0 .622 2.219 10.151 10.151 0 0 0 1.051 1.275q.732.78 1.889 1.881a14.89 14.89 0 0 1 2.906 3.56 7.5 7.5 0 0 1 .772 3.56 6.7 6.7 0 0 1-1.7 4.707 5.715 5.715 0 0 1-4.351 1.8 8.1 8.1 0 0 1-4.378-1.189v-3.287a7.871 7.871 0 0 0 3.962 1.318 2.844 2.844 0 0 0 2.233-.9 3.539 3.539 0 0 0 .806-2.448 4.724 4.724 0 0 0-.62-2.411 9.891 9.891 0 0 0-.891-1.173 21.12 21.12 0 0 0-1.429-1.476q-1.325-1.245-2.2-2.2A10.512 10.512 0 0 1 .806 203.5 7.044 7.044 0 0 1 0 199.96a6.443 6.443 0 0 1 1.581-4.579 5.577 5.577 0 0 1 4.282-1.707 9.836 9.836 0 0 1 4.36 1.133" transform="translate(0 -133.647)" style="fill: rgb(255, 255, 255);"></path></g></g></svg>
+                        </figure>
+                    </a>
+                    <!--
+                    <a href="#">
+                        <figure><img src="assets/images/icon/payanywhere.png" alt="img"></figure>
+                    </a>
+                    -->
+
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- ======== End of 1.5. ispsum section ========  -->
+        <!-- ======== 1.6. gateway section ========  -->
+        <section class="gateway">
+            <div class="container">
+                <div class="row gap-lg-0 gap-md-0 gap-sm-4 gap-4">
+                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center" data-aos="fade-up">
+                        <div class=" gateway-bg-img mt-5 ">
+                            <figure><img src="assets/images/index/switch.png" alt="gate_img1" class="moving"></figure>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6  text-md-start text-sm-center text-center" data-aos="fade-down">
+                        <h2>Switching Is Simple</h2>
+                        <P class="pt-lg-4 pt-md-3 pt-sm-2 pt-2">We handle the heavy lifting—from rate review to installation. Keep your business moving while we set up your payments the right way.</P>
+                        <div
+                            class="gate mt-md-3 mt-sm-0 mt-4   d-flex flex-md-row flex-sm-column flex-column align-items-center">
+                            <figure class="d-flex align-items-center"><img src="assets/images/icon/gate-icon1.png"
+                                    alt="gate-img1"></figure>
+                            <div class="account-text ms-3">
+                                <h5 class="pb-2">Share Your Statement</h5>
+                                <p class="p-f-s">Send us your current processing statement and we’ll build a side-by-side savings review.</p>
+                            </div>
+                        </div>
+                        <div class="gate d-flex mt-4  flex-md-row flex-sm-column flex-column align-items-center">
+                            <figure class="d-flex align-items-center"><img src="assets/images/icon/gate-icon2.png"
+                                    alt="gate-img2"></figure>
+                            <div class="ms-3">
+                                <h5 class="pb-2">Choose Your Setup</h5>
+                                <p class="p-f-s">Pick the right terminal or POS for your workflow—counter, handheld, online, or all three.</p>
+                            </div>
+                        </div>
+                        <div class="gate d-flex mt-4  flex-md-row flex-sm-column flex-column align-items-center">
+                            <figure class="d-flex align-items-center"><img src="assets/images/icon/gate-icon3.png"
+                                    alt="gate-img3"></figure>
+                            <div class="ms-3">
+                                <h5 class="pb-2">Go Live</h5>
+                                <p class="p-f-s">We install, test, and train your team so you can start taking payments confidently.</p>
+                            </div>
+                        </div>
+                        <div class="gate-link text-lg-start text-md-start text-sm-center text-center">
+                            <a class="btn-hover1" href="contact.html">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.6. gateway section ========  -->
+        <!-- ======== 1.7. services section ========  -->
+        <section class="services">
+            <div class="container">
+                <div class="row gap-md-0 gap-sm-4 gap-4">
+                    <div class="col-lg-6 col-md-6" data-aos="fade-down">
+                        <h2 class="text-lg-start text-md-start text-sm-center text-center">Built for Restaurants, Retail & Service</h2>
+                        <p class="text-lg-start text-md-start text-sm-center text-center mt-lg-4 mt-md-2 mt-sm-2 mt-2 pb-4 ">Whether you need a simple terminal or a full POS, Apex Payments helps you take more payments with less friction—tap, chip, swipe, online checkout, and invoicing.</p>
+                        <div class=" d-flex  justify-content-center gap-lg-4 gap-md-3 gap-sm-2 gap-2">
+                            <div class="offers">
+                                <h5 class="mb-2">Tap, Chip & Swipe</h5>
+                                <p class="p-f-s">Modern EMV + contactless payments with reliable hardware.</p>
+                            </div>
+                            <div class="offers">
+                                <h5 class=" mb-2">Real Support</h5>
+                                <p class="p-f-s">Text/call support and training so your team is never stuck.</p>
+                            </div>
+                        </div>
+                        <div class="serives-btn justify-content-md-start justify-content-ms-center justify-content-center d-flex">
+                            <a class="btn-hover1" href="feature.html">See Solutions</a>
+                            <div class="d-flex align-items-center">
+                                <a class="ps-4" href="contact.html">Request Demo</a>
+                                <i class="fa-solid fa-greater-than ps-md-3 ps-sm-1 ps-0"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center sevices_img" data-aos="fade-up">
+                        <div class="position-relative">
+
+                            <figure><img src="assets/images/POSMobile.png" alt="sevice_img2"></figure>
+                            <figure><img src="assets/images/icon/whitStar.png" alt="sevice_img3"></figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.7. services section ========  -->
+        <!-- ======== 1.8. visa section ========  -->
+        <section class="visa">
+            <div class="container">
+                <div class="visa-bg" data-aos="zoom-in">
+                    <figure><img src="assets/images/skytab%20Systems.png" alt="visa-img"></figure>
+                </div>
+                <div class="visa-contant" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <h3 class="text-md-start text-sm-center text-center">Simple pricing. Strong reporting.</h3>
+                            <p class="text-md-start text-sm-center text-center p-f-s">See every sale, fee, and payout in one place. Track trends, manage refunds, and reconcile deposits without spreadsheets.</p>
+                            <p class="text-md-start text-sm-center text-center p-f-s">Ask for a statement review and we’ll show where you can save—no pressure, just clarity.</p>
+                            <div class="visa-btn text-sm-center text-md-start text-center">
+                                <a class="btn-hover1" href="contact.html">Get a Statement Review</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="visa-logo d-flex justify-content-between align-items-center pt-2 pb-3">
+                                <figure><img src="assets/images/icon/vis-1.png" alt="vica-icon1"> </figure>
+                                <figure><img src="assets/images/icon/ves-2.png" alt="vica-icon2"></figure>
+                                <figure><img src="assets/images/icon/ves-3.png" alt="vica-icon3"></figure>
+                                <figure><img src="assets/images/icon/ves-4.png" alt="vica-icon4"></figure>
+                                <figure><img src="assets/images/icon/ves-5.png" alt="vica-icon5"></figure>
+                            </div>
+                            <div class="d-flex pt-2 justify-content-md-start justify-content-center justify-content-center">
+                                <h2 class="count">280</h2>
+                                <h2>+</h2>
+                                <h6 class="d-flex align-items-center ps-2 ">Integrations</h6>
+                            </div>
+                            <p class="pt-2 pb-3 text-md-start text-sm-center text-center p-f-s">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
+                                laboriosam
+                                officiis autem ut sit mollitia blanditiis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.8. visa section ========  -->
+        <!-- ========  1.9. pricing section ========  -->
+        <section class="pricing pricing-b-g">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center pricing-bg" data-aos="fade-up">
+                        <div>
+                            <figure><img src="assets/images/skytab%20pos.webp" alt="pric-img1" class="moving"></figure>
+                            <figure><img src="assets/images/icon/hero_star.png" alt="pric-img2"></figure>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 mt-md-0 mt-sm-5 mt-5" data-aos="fade-down">
+                        <h2 class=" text-md-start text-sm-center text-center">Monthly POS Pricing</h2>
+                        <p class="text-md-start text-sm-center text-center p-md-0 p-sm-2 p-2">Simple monthly software pricing for two of the most popular POS systems. Processing rates are customized separately based on your business.</p>
+                        <div class="pric-list">
+                            <h6>SkyTab POS</h6>
+                            <div class="d-flex">
+                                <div class="mt-3 me-3"><i class="fa-solid fa-check"></i></div>
+                                <div class="d-flex justify-content-between gap-1">
+                                    <p class="p-f-s">All-in-one restaurant POS with ordering, reporting, and payments.</p>
+                                    <div class="d-flex pric-sup">
+                                        <h2>$</h2>
+                                        <h2>29.99</h2>
+                                        <p>/month</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="pric-list second">
+                            <h6>Clover POS</h6>
+                            <div class="d-flex justify-content-between">
+                                <div class="mt-3 me-3"><i class="fa-solid fa-check"></i></div>
+                                <div class="d-flex justify-content-between">
+                                    <p class="p-f-s">Flexible POS for retail and service businesses with app marketplace.</p>
+                                    <div class="d-flex pric-sup ">
+                                        <h2>$</h2>
+                                        <h2>14.95</h2>
+                                        <p>/month</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                        <div class="text-md-start text-sm-center text-center pt-lg-4 pt-md-2 pt-sm-0 pt-1">
+                            <a class="btn-hover1" href="contact.html">Get POS Pricing</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.9. pricing section ========  -->
+        <!-- ======== 1.10. profaessional section ========  -->
+        <section class="profaessional">
+            <div class="container">
+                <h2 class="text-center">Trusted by Local Businesses</h2>
+                <P class="text-center pt-3 pb-5 mb-2">From busy restaurants to retail counters, Apex Payments helps teams check out faster, reduce chargebacks, and understand their true processing costs.</P>
+                <div class="prof-size"  data-aos="zoom-in-up">
+                    <div class="prof-slider ">
+                        <div class="prof-slide position-relative">
+                            <div>
+                                <div>
+                                    <img src="assets/images/slider/Comma.png" alt="img" class="prof-img-1">
+                                </div>
+                                <p class="text-center p-f-s">Apex Payments got us live on SkyTab quickly and made sure online ordering matched our menu. The checkout flow is faster, and reporting is way clearer than what we had before.</p>
+                                <div class="prof-star pt-2 pb-2 text-center">
+                                    <span class="stars text-lg-start">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </div>
+                                <h5 class="text-center">Los Pepes Mexican Restaurant</h5>
+                                <p class="text-center pt-2 pb-5 p-f-s">Owner: Jose Orozco • SkyTab + Online Ordering</p>
+                            </div>
+                        </div>
+                        <div class="prof-slide position-relative">
+                            <div>
+                                <div>
+                                    <img src="assets/images/slider/Comma.png" alt="img" class="prof-img-1">
+                                </div>
+                                <p class="text-center p-f-s">We switched to SkyTab and added online ordering without disrupting business. Setup and training were smooth, and our team picked it up fast.</p>
+                                <div class="prof-star pt-2 pb-2 text-center">
+                                    <span class="stars text-lg-start">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </div>
+                                <h5 class="text-center">Colima Carneceria & Taqueria</h5>
+                                <p class="text-center pt-2 pb-5 p-f-s">SkyTab + Online Ordering</p>
+                            </div>
+                        </div>
+                        <div class="prof-slide position-relative">
+                            <div>
+                                <div>
+                                    <img src="assets/images/slider/Comma.png" alt="img" class="prof-img-1">
+                                </div>
+                                <p class="text-center p-f-s">Online ordering has been a game changer for us. Apex Payments helped customize the setup and made sure payments and payouts stayed consistent from day one.</p>
+                                <div class="prof-star pt-2 pb-2 text-center">
+                                    <span class="stars text-lg-start">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </span>
+                                </div>
+                                <h5 class="text-center">Pita House Bakersfield</h5>
+                                <p class="text-center pt-2 pb-5 p-f-s">SkyTab + Online Ordering</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.10. profaessional section ========  -->
+        <!-- ======== 1.11. question section ========  -->
+        <section class="question">
+            <div class="container">
+                <div class="row">
+                    <div class="question-text col-lg-6 col-md-6 tab-center" data-aos="fade-up">
+                        <h2 class="text-lg-start text-md-start text-sm-center text-center">FREQUENTLY ASKED
+                            QUESTIONS
+                        </h2>
+                        <P class="text-lg-start text-md-start text-sm-center text-center mt-md-3 mt-3">Have questions about rates, funding, POS, or switching? Here are quick answers. Want a personalized review—reach out anytime.</P>
+                        <div class="text-lg-start text-md-start text-sm-center text-center ">
+                            <a class="btn-hover1" href="contact.html">Talk to Us</a>
+                        </div>
+                    </div>
+                    <div class="question-collapes col-lg-6 col-md-6 mt-md-0 mt-sm-3 mt-3" data-aos="zoom-in">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                      How fast can I get set up?
+                                    </button>
+                                </h5>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Most accounts can be approved and ready to run in 24–72 hours, depending on the business type and documentation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                         Do you work with restaurants and retail?
+                                    </button>
+                                </h5>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Yes. We support restaurants, quick service, retail, salons, services, and more—including online payments and invoicing.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
+                                        How fast are deposits and funding?
+                                    </button>
+                                </h5>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>Funding varies by program, but many businesses qualify for next-day deposits. We’ll confirm your schedule during onboarding.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h5 class="accordion-header" id="headingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
+                                         What support do you provide after installation?
+                                    </button>
+                                </h5>
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <p>You get real help—phone/text support, troubleshooting, and training for staff so checkout stays smooth.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======== End of 1.11. question section ========  -->
+        <!-- ======== 1.13. footer section ========  -->
+        <footer class="position-relative">
+            <div class="container">
+                <div class="footer-logo text-center pb-lg-4 pb-md-3 pb-sm-2 pb-4">
+                    <!-- footer logo  -->
+                    <a href="index.html">
+                        <figure><img src="assets/images/Logo.png" alt="img"></figure>
+                    </a>
+                </div>
+                <ul class="d-flex align-items-center justify-content-center">
+                    <li><a href="feature.html">Solutions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <hr>
+                <div class="row footer-nav-icon">
+                    <!-- footer social icon  -->
+                    <div class="col-lg-3 col-md-3 d-flex align-items-center justify-content-md-start justify-content-sm-center justify-content-center">
+                        <div
+                            class="social-icon d-flex gap-2 justify-content-md-start justify-content-sm-center justify-content-center">
+                            <a href="#"> <i class="fa-brands fa-facebook-f foot-facebook"></i></a>
+                            <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"> <i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <!-- footer terms privacy  -->
+                    <div class="col-lg-6 col-md-6 d-flex justify-content-center align-items-center">
+                        <div class=" d-flex gap-3 p-2">
+                            <a href="#">Terms & Condition</a>
+                            <a href="#">Privacy Policy</a>
+                        </div>
+                    </div>
+                    <!-- footer logo slider  -->
+                    <div class="col-lg-3 col-md-3">
+                        <div class="footer_ispsum_slider">
+                            <figure><a href="#"><img src="assets/images/icon/logoipsum-228.png" alt="qr-code"></a>
+                            </figure>
+                            <figure><a href="#"><img src="assets/images/icon/logoipsum-233.png" alt="qr-code"></a>
+                            </figure>
+                            <figure><a href="#"><img src="assets/images/icon/logoipsum-229.png" alt="qr-code"></a>
+                            </figure>
+                            <figure><a href="#"><img src="assets/images/icon/logoipsum-228.png" alt="qr-code"></a>
+                            </figure>
+                            <figure><a href="#"><img src="assets/images/icon/logoipsum-233.png" alt="qr-code"></a>
+                            </figure>
+                            <figure><a href="#"><img src="assets/images/icon/logoipsum-229.png" alt="qr-code"></a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="Copyright d-flex justify-content-between flex-wrap dir">
+                        <p>Copyright © 2025 Apex Payments. All Rights Reserved.</p>
+                        <p>Powered by Evonicsoft</p>
+                    </div>
+                </div>
+        </footer>
+        <!-- ======== End of 1.13. footer section ========  -->
+    </div>
+    <!-- end site wrapper -->
+    <!-- button back to top -->
+    <button onclick="scrollToTop()" id="backToTopBtn"><i class="fa-solid fa-arrow-turn-up"></i></button>
+
+    <!-- bootstrap min javascript -->
+    <script src="assets/js/javascript-lib/bootstrap.min.js"></script>
+    <!-- j Query -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- slick slider js -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- main javascript -->
+    <script src="assets/js/custom.js"></script>
+    <!-- counter javascript file -->
+    <script src="assets/js/waypoints.min.js"></script>
+    <!-- animation from javascript -->
+    <script src="assets/js/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1500,
+        });
+      </script>
+</body>
+
+</html>
