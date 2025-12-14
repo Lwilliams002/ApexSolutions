@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions | Apex Payments</title>
     <!-- favicon  -->
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
     <!-- faremwork of css -->
@@ -16,10 +18,16 @@
     <link rel="stylesheet" href="assets/font-awesome-lib/icon/font-awesome.min.css">
     <!-- slick-slider link css -->
     <link rel="stylesheet" href="assets/css/slick.min.css">
+</head>
     <!-- animation of css -->
     <link rel="stylesheet" href="assets/css/aos.css">
-    <title>About | Apex Payments</title>
+    <style>
+        /* Prevent theme sections from overlapping CTA buttons */
+        .core .btn-hover1 { position: relative; z-index: 5; }
+        .visa { position: relative; z-index: 1; margin-top: 64px !important; }
+    </style>
 </head>
+
 <body>
     <div class="site-wrapper">
         <div class="first_nav_hero_about">
@@ -43,11 +51,12 @@
                                     <a class="nav-link" href="index.html">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="about.html">About</a>
+                                    <a class="nav-link" href="about.html">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="feature.html">Solutions</a>
+                                    <a class="nav-link active" href="feature.html">Solutions</a>
                                 </li>
+
                                 <li class="nav-item">
                                     <a id="search-bar-bt" class="nav-link" href="#"><i
                                             class="fa-solid fa-magnifying-glass"></i></a>
@@ -67,7 +76,7 @@
                     <div id="mySidenav" class="sidenav">
                         <div class="side-nav-logo d-flex justify-content-between align-items-center ps-4 pe-3">
                             <figure class="navbar-brand"><a href="index.html"><img src="assets/images/Logo.png" alt="img"
-                                        class="nav-logo"></a></figure>
+                                                                                   class="nav-logo"></a></figure>
                             <div class="closebtn" onclick="closeNav()"><i
                                     class="fa-solid fa-square-xmark side-bar-close-btn"></i></div>
                         </div>
@@ -145,117 +154,151 @@
                 </section>
             </header>
             <!-- ======== End of 1.1. header section ========  -->
-            <!-- ======== 2.1. hero section ========  -->
-            <section>
-                <div class="about-hero container">
-                    <h1 class="text-center">About Apex Payments</h1>
-                    <p class="text-center about-p">Built for restaurants, retail, and service businesses—powered by real support and transparent pricing.</p>
-                    <div class="services  pb-lg-4 pb-md-2 pb-sm-0 pb-0 mb-lg-2 mb-md-1 mb-sm-0 mb-0">
-                        <div class="container">
-                            <div class="row gap-md-0 gap-sm-4 gap-4">
-                                <div class="col-lg-6 col-md-6" data-aos="fade-up">
-                                    <h2 class="text-lg-start text-md-start text-sm-center text-center">Payments made simple—for real businesses</h2>
-                                    <p class="text-lg-start text-md-start text-sm-center text-center mt-lg-4 mt-md-2 mt-sm-2 mt-2 pb-4 ">Apex Payments helps local businesses accept cards in-store, online, and on the go. We focus on clean setups, fast onboarding, and support that actually answers.</p>
-                                    <p class="text-lg-start text-md-start text-sm-center text-center pb-4 ">Our team is led by Jose Ramon Gomez and Lesly Williams—combining real-world business experience with modern software expertise to build smoother checkout experiences.</p>
-                                    <ul class="text-lg-start text-md-start text-sm-center text-center p-f-s text-white" style="list-style:none; padding-left:0; margin-bottom:24px; color:#fff;">
-                                        <li style="margin-bottom:10px;"><i class="fa-solid fa-check" style="margin-right:10px; color:#fff;"></i>POS setup & training (SkyTab for restaurants, Clover for retail/services)</li>
-                                        <li style="margin-bottom:10px;"><i class="fa-solid fa-check" style="margin-right:10px; color:#fff;"></i>Processing statement reviews to uncover your true effective rate</li>
-                                        <li style="margin-bottom:10px;"><i class="fa-solid fa-check" style="margin-right:10px; color:#fff;"></i>Online payments, invoicing, and pay-by-link options</li>
-                                        <li><i class="fa-solid fa-check" style="margin-right:10px; color:#fff;"></i>Ongoing support after install—so you’re not left on your own</li>
-                                    </ul>
-                                    <div class="serives-btn justify-content-md-start justify-content-ms-center justify-content-center d-flex pt-lg-4 pt-md-2 pt-sm-2 pt-2">
-                                        <a class="btn-hover1" href="contact.html">Get a Free Quote</a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center abt" data-aos="fade-down">
-                                    <div class="position-relative">
-                                        <figure class="abut-hero-img1"><img src="assets/images/simplepa.jpg" alt="img"></figure>
-                                        <figure class="abut-hero-img2"><img src="assets/images/icon/whitStar.png" alt="img"></figure>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- ======== 3.1. hero section ========  -->
+            <section class="feature-hero"  data-aos="zoom-in">
+                <div class="container">
+                    <h1 class="text-center">Solutions</h1>
+                    <p class="text-center">Two proven POS options—SkyTab for restaurants and Clover for retail & services. We’ll help you choose the right fit and get you live fast.</p>
+
                 </div>
             </section>
-            <!-- ======== 2.1. hero section ========  -->
+            <!-- ======== End of 3.1. hero section ========  -->
         </div>
-        <!-- ======== 1.4. finance section ========  -->
-        <!-- ======== End of 1.4. finance section ========  -->
-        <!-- ======== 1.5. ispsum section ========  -->
-        <!-- ======== End of 1.5. ispsum section ========  -->
-        <!-- ======== 2.2. banner section ========  -->
-        <section>
-            <div class="container about-banner" data-aos="zoom-in">
-                <div class="d-flex justify-content-lg-end justify-content-md-end justify-content-ms-center justify-content-center">
-                    <div class="banner-text">
-                        <h3 class="text-md-start text-sm-center text-center">Replacing complexity <br> with
-                            simplicity
-                        </h3>
-                        <p class="text-md-start text-sm-center text-center p-f-s">We replace complexity with simplicity—helping you choose the right POS, understand your rates, and get set up fast without disruptions.</p>
-                        <div class="visa-btn text-sm-center text-md-start text-center">
-                            <a class="btn-hover1" href="contact.html">Get a Quote</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ========End of 2.2. banner section ========  -->
-        <!-- ======== Why Apex section ======== -->
-        <section class="services" style="padding-top:40px; padding-bottom:40px;">
+        <!-- ======== Included with SkyTab section ======== -->
+        <section class="core">
             <div class="container">
-                <div class="row gap-md-0 gap-sm-4 gap-4 align-items-center">
-                    <div class="col-lg-6 col-md-6" data-aos="fade-up">
-                        <h2 class="text-lg-start text-md-start text-sm-center text-center">Why Apex Payments</h2>
-                        <p class="text-lg-start text-md-start text-sm-center text-center mt-lg-4 mt-md-2 mt-sm-2 mt-2 pb-3 p-f-s">We focus on straightforward pricing, reliable setups, and support that actually responds. No fluff—just systems that work during your busiest hours.</p>
-                        <div class="d-flex flex-column gap-3">
-                            <div class="d-flex align-items-start gap-3">
-                                <i class="fa-solid fa-shield-halved" style="margin-top:4px;"></i>
-                                <div>
-                                    <h5 class="mb-1">Built for real-world operations</h5>
-                                    <p class="p-f-s mb-0">Restaurants, retail counters, and service businesses—with POS choices that fit.</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start gap-3">
-                                <i class="fa-solid fa-receipt" style="margin-top:4px;"></i>
-                                <div>
-                                    <h5 class="mb-1">Statement clarity</h5>
-                                    <p class="p-f-s mb-0">We’ll explain fees in plain English and compare options side-by-side.</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start gap-3">
-                                <i class="fa-solid fa-headset" style="margin-top:4px;"></i>
-                                <div>
-                                    <h5 class="mb-1">Support after install</h5>
-                                    <p class="p-f-s mb-0">Training, troubleshooting, and help optimizing workflows as you grow.</p>
-                                </div>
-                            </div>
+                <h2 class="text-center">Included with SkyTab</h2>
+                <p class="core-p">Restaurant-first features designed to speed up ordering, improve accuracy, and keep the kitchen flowing.</p>
+                <div class="row d-flex gap-md-0 gap-sm-5 gap-5">
+                    <div class="col-lg-4 col-md-4 d-flex flex-column gap-3 justify-content-center" data-aos="fade-up">
+                        <div class="core-card">
+                            <h5>Tables & Floorplan</h5>
+                            <p>Manage dine-in service with table tracking, split checks, and quick seat moves.</p>
                         </div>
-                        <div class="serives-btn justify-content-md-start justify-content-ms-center justify-content-center d-flex pt-4">
-                            <a class="btn-hover1" href="contact.html">Request a Statement Review</a>
+                        <div class="core-card">
+                            <h5>Modifiers & Combos</h5>
+                            <p>Build menus with modifiers, upcharges, combos, and prep notes for accuracy.</p>
+                        </div>
+                        <div class="core-card">
+                            <h5>Menu & Item Reporting</h5>
+                            <p>See top sellers, voids, discounts, and sales trends by item and category.</p>
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 d-flex align-items-center justify-content-center" data-aos="fade-down">
-                        <figure style="margin:0;"><img src="assets/images/herobottom.png" alt="Payments setup" style="max-width:520px; width:100%; height:auto;"></figure>
+                    <div class="col-lg-4 col-md-4 d-flex justify-content-center align-items-center" data-aos="zoom-in">
+                        <figure><img src="assets/images/skytab%20pos.webp" alt="SkyTab POS screen"></figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex flex-column gap-3 justify-content-center" data-aos="fade-down">
+                        <div class="core-card1">
+                            <h5>Online Ordering Options</h5>
+                            <p>Offer takeout and pickup ordering with a smooth checkout experience.</p>
+                        </div>
+                        <div class="core-card1">
+                            <h5>Kitchen Printers / KDS Workflow</h5>
+                            <p>Route tickets to stations and reduce mistakes during rush hours.</p>
+                        </div>
+                        <div class="core-card1">
+                            <h5>Staff Management</h5>
+                            <p>Roles, permissions, and shift tools to keep operations consistent.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-lg-4 mt-md-4 mt-3" data-aos="fade-up">
+                    <a class="btn-hover1" href="contact.html">Request a SkyTab Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <!--
+        ======== Included with Clover section ========
+        <section class="core mb-5">
+            <div class="container">
+                <h2 class="text-center">Included with Clover</h2>
+                <p class="core-p">Flexible tools for retail and services—built to adapt with hardware choices and an app marketplace.</p>
+                <div class="row d-flex gap-md-0 gap-sm-5 gap-5">
+                    <div class="col-lg-4 col-md-4 d-flex flex-column gap-3 justify-content-center" data-aos="fade-up">
+                        <div class="core-card">
+                            <h5>Inventory & Items</h5>
+                            <p>Track items, variants, categories, and stock levels for retail workflows.</p>
+                        </div>
+                        <div class="core-card">
+                            <h5>Employees & Permissions</h5>
+                            <p>Set roles, limit discounts/refunds, and protect your checkout process.</p>
+                        </div>
+                        <div class="core-card">
+                            <h5>Quick Checkout Hardware</h5>
+                            <p>Choose countertop, handheld, or compact devices that fit your counter.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex justify-content-center align-items-center" data-aos="zoom-in">
+                        <figure><img src="assets/images/clover%20pos.webp" alt="Clover POS devices"></figure>
+                    </div>
+                    <div class="col-lg-4 col-md-4 d-flex flex-column gap-3 justify-content-center" data-aos="fade-down">
+                        <div class="core-card1">
+                            <h5>App Marketplace</h5>
+                            <p>Add features like loyalty, marketing, accounting exports, and more.</p>
+                        </div>
+                        <div class="core-card1">
+                            <h5>Invoices & Pay-by-Link</h5>
+                            <p>Send invoices, accept remote payments, and get paid without a website.</p>
+                        </div>
+                        <div class="core-card1">
+                            <h5>Reporting & Payouts</h5>
+                            <p>Track sales, deposits, and trends to understand performance at a glance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-lg-4 mt-md-4 mt-3 mb-5" data-aos="fade-up">
+                    <a class="btn-hover1" href="contact.html">Get a Clover Quote</a>
+                </div>
+            </div>
+        </section>
+        -->
+        <!-- ======== 1.8. visa section ========  -->
+        <section class="visa mt-md-5 mt-sm-5 mt-5 mb-0 pt-5">
+            <div class="container">
+                <div class="visa-contant" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <h3 class="text-md-start text-sm-center text-center">Simple pricing. Strong reporting.</h3>
+                            <p class="text-md-start text-sm-center text-center p-f-s">See every sale, fee, and payout in one place. Track trends, manage refunds, and reconcile deposits without spreadsheets.</p>
+                            <p class="text-md-start text-sm-center text-center p-f-s">Ask for a statement review and we’ll show where you can save—no pressure, just clarity.</p>
+                            <div class="visa-btn text-sm-center text-md-start text-center">
+                                <a class="btn-hover1" href="contact.html">Get a Statement Review</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="visa-logo d-flex justify-content-between align-items-center pt-2 pb-3">
+                                <figure><img src="assets/images/icon/vis-1.png" alt="vica-icon1"> </figure>
+                                <figure><img src="assets/images/icon/ves-2.png" alt="vica-icon2"></figure>
+                                <figure><img src="assets/images/icon/ves-3.png" alt="vica-icon3"></figure>
+                                <figure><img src="assets/images/icon/ves-4.png" alt="vica-icon4"></figure>
+                                <figure><img src="assets/images/icon/ves-5.png" alt="vica-icon5"></figure>
+                            </div>
+                            <div
+                                class="d-flex pt-2 justify-content-md-start justify-content-center justify-content-center">
+                                <h2 class="count">280</h2>
+                                <h2>+</h2>
+                                <h6 class="d-flex align-items-center ps-2 ">Integrations</h6>
+                            </div>
+                            <p class="pt-2 pb-3 text-md-start text-sm-center text-center p-f-s">Compatible with modern checkout needs—contactless payments, receipts, refunds, and daily reporting.</p>
+
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- ======== End Why Apex section ======== -->
-        <!-- ======== 1.10. profaessional section ========  -->
-        <!-- ======== End of 1.10. profaessional section ========  -->
+        <!-- ======== End of 1.8. visa section ========  -->
         <!-- ======== 1.13. footer section ========  -->
-        <footer class="position-relative pt-lg-1 pt-md-1 pt-sm-1 pt-1">
+        <footer class="position-relative pt-lg-5 pt-md-0 pt-sm-0 pt-0">
             <div class="container">
                 <div class="footer-logo text-center pb-lg-4 pb-md-3 pb-sm-2 pb-4">
                     <!-- footer logo  -->
                     <a href="index.html">
-                        <figure><img src="assets/images/Logo.png" alt="Apex Payments"></figure>
+                        <figure><img src="assets/images/Logo.png" alt="img"></figure>
                     </a>
                 </div>
                 <ul class="d-flex align-items-center justify-content-center">
                     <li><a href="feature.html">Solutions</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -305,27 +348,27 @@
         </footer>
         <!-- ======== End of 1.13. footer section ========  -->
     </div>
-     <!-- end site wrapper -->
-   <!-- button back to top -->
-   <button onclick="scrollToTop()" id="backToTopBtn"><i class="fa-solid fa-arrow-turn-up"></i></button>
-<!-- bootstrap min javascript -->
-<script src="assets/js/javascript-lib/bootstrap.min.js"></script>
-<!-- j Query -->
-<script src="assets/js/jquery.js"></script>
-<!-- slick slider js -->
-<script src="assets/js/slick.min.js"></script>
-<!-- main javascript -->
-<script src="assets/js/custom.js"></script>
-<!-- counter javascript file -->
-<script src="assets/js/waypoints.min.js"></script>
- <!-- animation from javascript -->
- <script src="assets/js/aos.js"></script>
- <script>
-     AOS.init({
-         once: true,
-         duration: 1500,
-     });
-   </script>
+    <!-- button back to top -->
+    <button onclick="scrollToTop()" id="backToTopBtn"><i class="fa-solid fa-arrow-turn-up"></i></button>
+
+    <!-- bootstrap min javascript -->
+    <script src="assets/js/javascript-lib/bootstrap.min.js"></script>
+    <!-- j Query -->
+    <script src="assets/js/jquery.js"></script>
+    <!-- slick slider js -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- main javascript -->
+    <script src="assets/js/custom.js"></script>
+    <!-- counter javascript file -->
+    <script src="assets/js/waypoints.min.js"></script>
+    <!-- animation from javascript -->
+    <script src="assets/js/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 1500,
+        });
+    </script>
 </body>
 
 </html>
