@@ -657,6 +657,25 @@
     <script src="assets/js/slick.min.js"></script>
     <!-- main javascript -->
     <script src="assets/js/custom.js"></script>
+    <script>
+      // Fallback init: ensure testimonials slider runs on all environments (incl. GitHub Pages)
+      document.addEventListener('DOMContentLoaded', function () {
+        if (window.jQuery && jQuery.fn && typeof jQuery.fn.slick === 'function') {
+          var $slider = jQuery('.prof-slider');
+          if ($slider.length && !$slider.hasClass('slick-initialized')) {
+            $slider.slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              dots: true,
+              autoplay: true,
+              autoplaySpeed: 4000,
+              adaptiveHeight: true
+            });
+          }
+        }
+      });
+    </script>
     <!-- counter javascript file -->
     <script src="assets/js/waypoints.min.js"></script>
     <!-- animation from javascript -->

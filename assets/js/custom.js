@@ -1,18 +1,24 @@
 // navigation search-bar
-
-let topSearch = document.getElementById("search-bar-bt");
-topSearch.onclick = () => {
-    let SearchBar = document.getElementById("search-bar")
+const topSearch = document.getElementById("search-bar-bt");
+if (topSearch) {
+  topSearch.onclick = () => {
+    const SearchBar = document.getElementById("search-bar");
+    if (!SearchBar) return;
     SearchBar.style.height = "100vh";
-    SearchBar.style.display = "flex";   
-    document.body.style.overflow = "hidden"; 
-    }
- let btn = document.getElementById("remove-btn");
-    btn.onclick = ()=>{
-      remov = document.getElementById("search-bar")
-      remov.style.display = "none" 
-      document.body.style.overflow = "unset"; 
-    }
+    SearchBar.style.display = "flex";
+    document.body.style.overflow = "hidden";
+  };
+}
+
+const btn = document.getElementById("remove-btn");
+if (btn) {
+  btn.onclick = () => {
+    const remov = document.getElementById("search-bar");
+    if (!remov) return;
+    remov.style.display = "none";
+    document.body.style.overflow = "unset";
+  };
+}
 
 
 // right-sidebar
@@ -47,135 +53,80 @@ function openNav() {
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
 }
-let slid = document.getElementById("slid-btn");
-slid.onclick = ()=>{
-    let drop= document.getElementById("slid-drop");
-   drop.classList.toggle("myst");
+const slid = document.getElementById("slid-btn");
+if (slid) {
+  slid.onclick = () => {
+    const drop = document.getElementById("slid-drop");
+    if (!drop) return;
+    drop.classList.toggle("myst");
+  };
 }
 
-// ========= ipsum logo
+// ========= sliders (safe init)
+(function initSliders() {
+  if (!window.jQuery) return;
+  const $ = window.jQuery;
+  if (!$.fn || typeof $.fn.slick !== 'function') return;
 
-$('.logo_ispsum_slider').slick({
-    arrows: false,
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 3000,
-    slidesToShow: 4,
-    cssEase: 'linear',
-    responsive: [{
-            breakpoint: 1000,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false,
-            }
-        },
-    {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: false,
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 450,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-    ]
-});
+  function safeSlick(selector, options) {
+    const $el = $(selector);
+    if (!$el.length) return;
+    if ($el.hasClass('slick-initialized')) return;
+    $el.slick(options);
+  }
+
+  $(document).ready(function () {
+    safeSlick('.logo_ispsum_slider', {
+      arrows: false,
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 0,
+      speed: 3000,
+      slidesToShow: 4,
+      cssEase: 'linear',
+      responsive: [
+        { breakpoint: 1000, settings: { slidesToShow: 3, slidesToScroll: 1, infinite: true, dots: false } },
+        { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 2, infinite: true, dots: false } },
+        { breakpoint: 600, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+        { breakpoint: 450, settings: { slidesToShow: 2, slidesToScroll: 1 } }
+      ]
+    });
+
+    safeSlick('.visa-logo', {
+      arrows: false,
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 0,
+      speed: 3000,
+      slidesToShow: 4,
+      cssEase: 'linear',
+      responsive: [
+        { breakpoint: 1000, settings: { slidesToShow: 3, slidesToScroll: 1, infinite: true, dots: false } },
+        { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 2, infinite: true, dots: false } },
+        { breakpoint: 600, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+        { breakpoint: 450, settings: { slidesToShow: 2, slidesToScroll: 1 } }
+      ]
+    });
+
+    safeSlick('.prof-slider', {
+      arrows: true,
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        { breakpoint: 768, settings: { slidesToShow: 1, slidesToScroll: 1, infinite: true, dots: false } },
+        { breakpoint: 600, settings: { slidesToShow: 1, slidesToScroll: 1 } }
+      ]
+    });
+  });
+})();
 
 
-//visa logo
-
-$('.visa-logo').slick({
-    arrows: false,
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 0,
-    speed: 3000,
-    slidesToShow: 4,
-    cssEase: 'linear',
-    responsive: [{
-            breakpoint: 1000,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false,
-            }
-        },
-    {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: false,
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-        {
-            breakpoint: 450,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1
-            }
-        },
-    ]
-});
-
-// profactional slider
-
-$('.prof-slider').slick({
-    arrows: true,
-    dots: false,
-    infinite: true,
-    autoplay: true,
-    speed: 700,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // prevArrow: '<button class="prev-arrow"><i class="fa-solid fa-arrow-left"></i></button>',
-    // nextArrow: '<button class="next-arrow"><i class="fa-solid fa-arrow-right"></i></button>',
-    responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                dots: false,
-            }
-        },
-        {
-            breakpoint: 600,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1
-            }
-        },
-    ]
-});
 // footer logo ispsum
 $('.footer_ispsum_slider').slick({
     arrows: false,
@@ -186,7 +137,7 @@ $('.footer_ispsum_slider').slick({
     speed: 4000,
     slidesToShow: 2,
     cssEase: 'linear',
-  
+
     pauseOnHover: true,
     responsive: [{
             breakpoint: 900,
@@ -293,7 +244,7 @@ jQuery(document)
     });
 
 
-    // button back to top 
+    // button back to top
 window.onscroll = function() {
     scrollFunction()
 };
@@ -353,15 +304,18 @@ accordionItems.forEach((item, index) => {
   });
 });
 
-  // form Subscribe massage
-  const aboutFor = document.getElementById('footer-sub2');
-  const aboutMessag = document.getElementById('Succes-box2');
+
+// form Subscribe message (guarded)
+const aboutFor = document.getElementById('footer-sub2');
+const aboutMessag = document.getElementById('Succes-box2');
+if (aboutFor && aboutMessag) {
   aboutFor.addEventListener('submit', (event) => {
-      event.preventDefault();
-      aboutMessag.innerHTML = 'You Subscribe successfully!';
-      aboutMessag.style.display = 'block';
-      aboutFor.reset();
-      setTimeout(() => {
-        aboutMessag.style.display = 'none';
-      }, 3000);
+    event.preventDefault();
+    aboutMessag.innerHTML = 'You Subscribe successfully!';
+    aboutMessag.style.display = 'block';
+    aboutFor.reset();
+    setTimeout(() => {
+      aboutMessag.style.display = 'none';
+    }, 3000);
   });
+}
